@@ -1,8 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y8B-qc-mY3">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Trivia View Controller-->
+        <scene sceneID="spd-Tj-Mzl">
+            <objects>
+                <viewController id="y8B-qc-mY3" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3d-Bx-b2J">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xte-W4-1dm">
+                                <rect key="frame" x="149" y="357.33333333333331" width="95.333333333333314" height="137.33333333333331"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIW-iu-l4D">
+                                        <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Answer 1"/>
+                                        <connections>
+                                            <action selector="answerTapped:" destination="y8B-qc-mY3" eventType="touchUpInside" id="cZt-EJ-KQY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5g-GQ-adT">
+                                        <rect key="frame" x="0.0" y="34.333333333333371" width="95.333333333333329" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Answer 2"/>
+                                        <connections>
+                                            <action selector="answerTapped:" destination="y8B-qc-mY3" eventType="touchUpInside" id="PIg-eW-Neq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoC-F1-Yu0">
+                                        <rect key="frame" x="0.0" y="68.666666666666686" width="95.333333333333329" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Answer 3"/>
+                                        <connections>
+                                            <action selector="answerTapped:" destination="y8B-qc-mY3" eventType="touchUpInside" id="Sz8-Sp-Zci"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhV-hw-had">
+                                        <rect key="frame" x="0.0" y="103" width="95.333333333333329" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Answer 4"/>
+                                        <connections>
+                                            <action selector="answerTapped:" destination="y8B-qc-mY3" eventType="touchUpInside" id="Eq3-WZ-Zkj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqn-sG-9ST">
+                                <rect key="frame" x="162.33333333333334" y="285" width="68.666666666666657" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4IQ-fT-13T"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerX" secondItem="p3d-Bx-b2J" secondAttribute="centerX" id="0T8-O8-hRc"/>
+                            <constraint firstItem="Xte-W4-1dm" firstAttribute="centerY" secondItem="p3d-Bx-b2J" secondAttribute="centerY" id="12j-hn-LY8"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerX" secondItem="p3d-Bx-b2J" secondAttribute="centerX" id="8Va-fe-jpF"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerY" secondItem="p3d-Bx-b2J" secondAttribute="centerY" id="FLp-yu-toU"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerX" secondItem="p3d-Bx-b2J" secondAttribute="centerX" id="MxV-7g-YHD"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerX" secondItem="p3d-Bx-b2J" secondAttribute="centerX" id="OKn-d2-10B"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerX" secondItem="p3d-Bx-b2J" secondAttribute="centerX" id="QDM-0b-zgt"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerY" secondItem="p3d-Bx-b2J" secondAttribute="centerY" constant="-123.83" id="RDv-EX-mgx"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerY" secondItem="p3d-Bx-b2J" secondAttribute="centerY" constant="20" id="Uxs-ME-49l"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerY" secondItem="p3d-Bx-b2J" secondAttribute="centerY" constant="40" id="Zbu-Ic-j4N"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerY" secondItem="p3d-Bx-b2J" secondAttribute="centerY" id="bir-t5-FlB"/>
+                            <constraint firstItem="kqn-sG-9ST" firstAttribute="centerY" secondItem="p3d-Bx-b2J" secondAttribute="centerY" constant="20" id="muZ-2Y-Vhn"/>
+                            <constraint firstItem="Xte-W4-1dm" firstAttribute="centerX" secondItem="p3d-Bx-b2J" secondAttribute="centerX" id="yZa-h4-wCg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="optionButton1" destination="mIW-iu-l4D" id="sW8-fo-FjQ"/>
+                        <outlet property="optionButton2" destination="i5g-GQ-adT" id="Dxa-Rd-or0"/>
+                        <outlet property="optionButton3" destination="zoC-F1-Yu0" id="Nc3-Qh-MtG"/>
+                        <outlet property="optionButton4" destination="FhV-hw-had" id="dRr-ge-eNQ"/>
+                        <outlet property="questionLabel" destination="kqn-sG-9ST" id="52I-N5-26B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBg-Rq-VuI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35.877862595419849" y="-29.577464788732396"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
